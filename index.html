@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二十三班服务网站</title>
+		<style type="text/css">
+			body{
+				text-align: center;
+				background-color: #00AAFF;
+			}
+			.title{
+				background-image:-webkit-linear-gradient(left,#AAAA00,#AAFF44,#88FF88,#00FFAA,#00AAAA);
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+			}
+			.shedule, .now{
+				color: #AABB00;
+			}
+		</style>
+	</head>
+	<body>
+		<!--title-->
+		<div>
+			<h1 class="title">高一二十三班</h1>
+			<h2 class="title">class23.c1n.cn</h2>
+		</div>
+		<hr/>
+		<!--shedule-->
+		<div>
+			<h4 class="shedule"; id="day"></h4>
+			<script type="text/javascript">
+				var myDate = new Date();
+				var i=myDate.getTime()-1649520000*1000;
+				var j=Math.trunc(i/(24*60*60*1000));
+				if(j%2==0) {
+					document.getElementById("day").innerHTML="今日课程: 语文 化学 物理 数学 英语 生物";
+				}else{
+					document.getElementById("day").innerHTML="今日课程: 英语 语文 生物 数学 物理 化学";
+				}
+			</script>
+			<h4 class="shedule"; id="night"></h4>
+			<script type="text/javascript">
+				var myDate = new Date();
+				var i=myDate.getDay();
+				switch(i) {
+					case 0:
+						document.getElementById("night").innerHTML="今日晚节: 语文";
+						break;
+					case 1:
+						document.getElementById("night").innerHTML="今日晚节: 生物";
+						break;
+					case 2:
+						document.getElementById("night").innerHTML="今日晚节: 数学";
+						break;
+					case 3:
+						document.getElementById("night").innerHTML="今日晚节: 化学";
+						break;
+					case 4:
+						document.getElementById("night").innerHTML="今日晚节: 物理";
+						break;
+					case 5:
+						document.getElementById("night").innerHTML="今日晚节: 英语";
+						break;
+					case 6:
+						document.getElementById("night").innerHTML="今日晚节: 语文";
+						break;
+					
+				}
+			</script>
+		</div>
+		<!--now-->
+		<hr/>
+		<div>
+			<h4 class="now"; id="now"></h4>
+			<script type="text/javascript">
+				var myDate = new Date();
+				var h=myDate.getHours();
+				var min=myDate.getMinutes();
+				var t=h+0.01*min;
+				if(t>6.3&&t<7.4) {
+					document.getElementById("now").innerHTML="检测到现在是早自习,已将摸鱼IP记录";
+				}else if(t>8&&t<8.4) {
+					document.getElementById("now").innerHTML="检测到现在是第一节课,已将摸鱼IP记录";
+				}else if(t>9&&t<9.4) {
+					document.getElementById("now").innerHTML="检测到现在是第二节课,已将摸鱼IP记录";
+				}else if(t>10&&t<10.4) {
+					document.getElementById("now").innerHTML="检测到现在是第三节课,已将摸鱼IP记录";
+				}else if(t>11&&t<11.4) {
+					document.getElementById("now").innerHTML="检测到现在是第四节课,已将摸鱼IP记录";
+				}else if(t>14&&t<14.4) {
+					document.getElementById("now").innerHTML="检测到现在是第五节课,已将摸鱼IP记录";
+				}else if(t>15&&t<15.4) {
+					document.getElementById("now").innerHTML="检测到现在是第六节课,已将摸鱼IP记录";
+				}else if(t>18&&t<18.4) {
+					document.getElementById("now").innerHTML="检测到现在是晚辅导,已将摸鱼IP记录";
+				}else if(t>19&&t<21.3) {
+					document.getElementById("now").innerHTML="检测到现在是晚自习,已将摸鱼IP记录";
+				}else{
+					document.getElementById("now").innerHTML="检测到现在是下课时间,还不快去内卷!";
+				}
+			</script>
+		</div>
+	</body>
+</html>
