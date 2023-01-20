@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>二十三班抽签系统</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div id="body">
+		<div id="title">
+			<br>
+			<h1>二十三班抽签系统</h1>
+		</div>
+		<div id="navbar">
+			<div class="nav" id="nav-1" onclick="setMode(1)">
+				<div class="nav-1" id="nav-1-1"></div>
+				<div class="nav-2" id="nav-1-2">
+					普通随机抽签
+				</div>
+			</div>
+			<div class="nav" id="nav-2" onclick="setMode(2)">
+				<div class="nav-1" id="nav-2-1"></div>
+				<div class="nav-2" id="nav-2-2">
+					不放回抽签
+				</div>
+			</div>
+			<div class="nav" id="nav-3" onclick="setMode(3)">
+				<div class="nav-1" id="nav-3-1"></div>
+				<div class="nav-2" id="nav-3-2">
+					只抽杨金澎
+				</div>
+			</div>
+			<div class="nav" id="nav-4" onclick="setMode(4)">
+				<div class="nav-1" id="nav-4-1"></div>
+				<div class="nav-2" id="nav-4-2">
+					随机工具
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<iframe id="main-inner" src="" frameborder="0" width="600px" height="600px"></iframe>
+		</div>
+	</div>
+	<script src="index.js"></script>
+	<script>
+		setMode(1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<body>
+	<style>
+		h1, h2, h3, h4, h5, p{
+			color: #dddddd;
+		}
+		#title, #output{
+			text-align: center;
+		}
+		#btn{
+			width: 100px;
+			height: 25px;
+			border: #dddddd 1px solid;
+			color: #dddddd;
+			text-align: center;
+			font-size: 1.2em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#table{
+			width: 560px;
+			color: #dddddd;
+			text-align: center;
+		}
+		.tr{
+			height: 25px;
+		}
+		.td-1{
+			width: 60px;
+			float: left;
+			background-color: rgba(134, 199, 255, 0.3);
+		}
+		.td-2{
+			width: 300px;
+			float: left;
+			background-color: rgba(134, 199, 255, 0.1);
+		}
+		.td-3{
+			width: 200px;
+			float: left;
+			background-color: rgba(134, 199, 255, 0.3);
+		}
+	</style>
+	<div id="title">
+		<h1>普通随机抽签</h1>
+	</div>
+	<div id="btn" onclick="draw1()">点我抽签</div>
+	<div id="output">
+		<h1 id="result"></h1>
+	</div>
+	<br>
+	<div id="table">
+		<div class="tr" id="tr-0">
+			<div class="td-1">序号</div>
+			<div class="td-2">姓名</div>
+			<div class="td-3">次数</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
