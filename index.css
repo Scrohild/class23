@@ -7,12 +7,15 @@ a:link, a:visited, a:active, a:hover{
 }
 
 body{
-	background-color: #00346e;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 #body{
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: rgba(0, 31, 65, 0.8);
 }
 
 #title{
